@@ -1,0 +1,48 @@
+pip install django
+python -m django --version
+django-admin --version
+
+django-admin startproject myproject
+cd RAM
+
+To Create App
+python manage.py startapp Blog
+
+TO Run: 
+python manage.py runserver  
+
+views.py ===> Logic parts to fetch on frontend by backends
+urls.py ===> Routing Parts
+models.py ==>
+
+
+
+2. Create a Superuser
+Run the following command to create an admin user:
+----python manage.py createsuperuser
+Provide a username, email, and password when prompted.
+
+1. makemigrations:
+This command creates migration files based on changes in your models.
+----python manage.py makemigrations
+
+
+2. migrate:
+This command applies migration files to the database, making the actual changes (e.g., creating tables, adding columns).
+It ensures the database schema is up-to-date with the migration files.
+---python manage.py migrate
+
+*******************************************
+When Do You Use Them?
+After Adding/Modifying Models:
+
+Use makemigrations to create migration files.
+Use migrate to apply those migrations to the database.
+When Setting Up a New Environment:
+
+Clone the project.
+Run migrate to apply existing migrations and set up the database schema.
+When Deploying Updates:
+
+Make changes to your models locally, create migrations, and test them.
+Deploy and run migrate on the production database.
